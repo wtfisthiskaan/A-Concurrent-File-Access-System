@@ -1,13 +1,13 @@
-## A concurrent file access system written with C.
+# A concurrent file access system written with C.
 
-# Introduction 
+### Introduction 
 In this project, I designed a server client file management system which
 allows clients to perform various file operations such as listing files, reading
 files, writing to files, uploading files, and downloading files. The system
 consists of a server program and multiple client programs that communicate
 using a named pipe for interprocess communication.
 
-# System Architecture
+### System Architecture
 
 The system follows a client-server architecture, where multiple client
 programs connect to a central server program. The server program handles
@@ -16,7 +16,7 @@ file operations, and sends the appropriate responses back to the clients.
 Each client program can independently execute commands and interact with
 the server.
 
-# Design Decisions
+### Design Decisions
 
 Communication Protocol: The named pipe (FIFO) was chosen as the
 communication protocol between clients and the server.
@@ -36,9 +36,9 @@ files, reading files, writing to files, uploading files, and downloading files. 
 commands are sent by clients to the server, which processes them
 accordingly and provides appropriate responses.
 
-### Implementation Details
+## Implementation Details
 
-# Server
+### Server
 The server program does handle multiple client connections
 concurrently and processing commands to send back response.
 It listens for client connection from fifo at first.
@@ -54,7 +54,7 @@ one client can access the critical section at a time, avoiding conflicts and
 data corruption.
 Server log file is created and the server completes its lifetime.
 
-# Client
+### Client
 
 The client program does handle communication with server. It does
 open fifo, and sends its process id to server.
