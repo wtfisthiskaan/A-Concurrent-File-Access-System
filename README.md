@@ -67,6 +67,9 @@ If killServer or quit commands entered, the while loop ends and program
 sends this commands to server in order to process this commands in server
 side.
 
+## Test Results
+
+<img width="447" alt="Ekran Resmi 2024-02-08 23 01 54" src="https://github.com/wtfisthiskaan/A-Concurrent-File-Access-System/assets/78760338/4337738c-d9c3-4640-9671-c332591dae7d">
 
 
 
